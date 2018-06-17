@@ -12,6 +12,9 @@ kubectl scale --replicas=3 deployment/herpderp
 kubectl set image deployment azure-vote-front azure-vote-front=<acrLoginServer>/azure-vote-front:v2
 
 kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
+kubectl run -i --tty --rm debug --image=nginx --restart=Never -- sh
 kubectl run -i --tty --rm debug --image=ubuntu:latest --restart=Never -- sh
 
 $(bx cs cluster-config <cluster-name>|grep "export KUBECONFIG")
+
+kubectl get deployment -o wide
