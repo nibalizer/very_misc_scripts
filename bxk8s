@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cluster=$1
+
+if [ -z $cluster ]; then
+
+        ls ${HOME}/.bluemix/plugins/container-service/clusters/
+else 
+
+        echo configuring cluster: $cluster
+        echo "Warning: May be old, fall back to bx if it's weird"
+        cluster_config=$(echo /home/nibz/.bluemix/plugins/container-service/clusters/${cluster}/kube-config-*-${cluster}.yml)
+        echo "Kubeconfig: $cluster_config"
+        echo "export KUBECONFIG=${cluster_config}"
+
+
+fi
+
+
+
+
