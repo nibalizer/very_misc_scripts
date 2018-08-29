@@ -14,6 +14,11 @@ kubectl set image deployment azure-vote-front azure-vote-front=<acrLoginServer>/
 kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
 kubectl run -i --tty --rm debug --image=nginx --restart=Never -- sh
 kubectl run -i --tty --rm debug --image=ubuntu:latest --restart=Never -- sh
+kubectl run -i --tty poke2-`date +%s` --image=nibalizer/utilities --restart=Never -- sh
+
+docker pull nibalizer/utilities
+hashicorp/http-echo # 5678
+
 
 $(bx cs cluster-config <cluster-name>|grep "export KUBECONFIG")
 
