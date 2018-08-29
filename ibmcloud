@@ -1,0 +1,5 @@
+# For use with the IBM Cloud
+
+
+# Get tracing information on calls to ibmcloud apis
+IBMCLOUD_TRACE=true ibmcloud ks clusters
