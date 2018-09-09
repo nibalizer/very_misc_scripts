@@ -3,3 +3,7 @@
 
 # Get tracing information on calls to ibmcloud apis
 IBMCLOUD_TRACE=true ibmcloud ks clusters
+
+
+# Perform raw 'container list' request
+curl -X GET --header 'Accept: application/json' --header "Authorization: $(ibmcloud iam oauth-tokens | awk '{print $NF}')" 'https://containers.bluemix.net/v1/clusters'
