@@ -19,4 +19,9 @@ cp -f "autocomplete/bash_autocomplete" "${HOME}/.bash_completion.d/ibmcloud_auto
 cd /tmp
 rm -fr "$temp_dir"
 
+${HOME}/local/bin/ibmcloud config --usage-stats-collect false
+${HOME}/local/bin/ibmcloud plugin install -f kubernetes-service
+
+echo "ibmcloud cli utility installed/upgraded to ${HOME}/local/bin"
+echo "add it to your path to start using it"
 
