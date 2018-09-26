@@ -23,6 +23,7 @@ rm -fr "$temp_dir"
 
 ${HOME}/local/bin/ibmcloud config --usage-stats-collect false
 ${HOME}/local/bin/ibmcloud plugin install -f kubernetes-service
+${HOME}/local/bin/ibmcloud plugin install -f cloud-functions
 
 echo "ibmcloud cli utility installed/upgraded to ${HOME}/local/bin"
 echo "add it to your path to start using it"
