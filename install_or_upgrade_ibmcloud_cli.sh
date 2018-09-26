@@ -11,9 +11,11 @@ wget $linux_url
 mv linux64 linux64.tar.gz 
 tar -xvzf linux64.tar.gz
 cd Bluemix_CLI/
+mkdir -p ${HOME}/local/bin/cfcli
 
 cp -f "bin/ibmcloud" "${HOME}/local/bin/"
 cp -f "bin/ibmcloud-analytics" "${HOME}/local/bin/"
+cp -f "bin/cfcli/cf" "${HOME}/local/bin/cfcli/cf"
 cp -f "autocomplete/bash_autocomplete" "${HOME}/.bash_completion.d/ibmcloud_autocomplete"
 
 cd /tmp
