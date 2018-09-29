@@ -7,3 +7,15 @@ IBMCLOUD_TRACE=true ibmcloud ks clusters
 
 # Perform raw 'container list' request
 curl -X GET --header 'Accept: application/json' --header "Authorization: $(ibmcloud iam oauth-tokens | awk '{print $NF}')" 'https://containers.bluemix.net/v1/clusters'
+
+
+
+# convert a $apikey (can be a Service-Id key) into a bearer token
+curl -k -X POST \
+  --header "Content-Type: application/x-www-form-urlencoded" \
+  --header "Accept: application/json" \
+  --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
+  --data-urlencode "apikey=${apikey}" \
+  "https://iam.bluemix.net/identity/token"
+
+
