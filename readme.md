@@ -9,3 +9,4 @@ These are all terrible and you should not use them. They could set your computer
 ## Resources
 
 * http://hyperpolyglot.org/
+* https://gist.github.com/subfuzion/08c5d85437d5d4f00e58
