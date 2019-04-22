@@ -23,3 +23,6 @@ hashicorp/http-echo # 5678
 $(bx cs cluster-config <cluster-name>|grep "export KUBECONFIG")
 
 kubectl get deployment -o wide
+
+wget https://storage.googleapis.com/kubernetes-release/release/v1.4.4/bin/linux/amd64/kubectl
+ ./kubectl  --certificate-authority=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt  --server=${KUBERNETES_SERVICE_HOST} --token=/var/run/secrets/kubernetes.io/serviceaccount/token get pod
