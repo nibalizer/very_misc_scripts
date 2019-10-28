@@ -18,3 +18,8 @@ cat foo.json | jq '.kitchens[].sink'
 # delete an item
 
 cat foo.json | jq -c 'del(.kitchens[].sink'
+
+
+
+# references
+https://zxvf.org/post/jq-as-grep/
