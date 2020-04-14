@@ -25,6 +25,7 @@ ${HOME}/local/bin/ibmcloud config --usage-stats-collect false
 ${HOME}/local/bin/ibmcloud plugin install -f kubernetes-service
 ${HOME}/local/bin/ibmcloud plugin install -f cloud-functions
 ${HOME}/local/bin/ibmcloud plugin install -f container-registry
+${HOME}/local/bin/ibmcloud plugin install -f vpc-infrastructure
 
 echo "Be sure to set IKS_BETA_VERSION=1.0 for the latest and greatest experience"
 echo "ibmcloud cli utility installed/upgraded to ${HOME}/local/bin"
