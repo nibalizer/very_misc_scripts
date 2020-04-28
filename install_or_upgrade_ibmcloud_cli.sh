@@ -15,7 +15,8 @@ mkdir -p ${HOME}/local/bin/cfcli
 
 cp -f "bin/ibmcloud" "${HOME}/local/bin/"
 cp -f "bin/ibmcloud-analytics" "${HOME}/local/bin/"
-cp -f "bin/cfcli/cf" "${HOME}/local/bin/cfcli/cf"
+# CF seems to be removed
+#cp -f "bin/cfcli/cf" "${HOME}/local/bin/cfcli/cf"
 cp -f "autocomplete/bash_autocomplete" "${HOME}/.bash_completion.d/ibmcloud_autocomplete"
 
 cd /tmp
