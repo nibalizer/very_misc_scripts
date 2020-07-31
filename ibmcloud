@@ -19,3 +19,5 @@ curl -k -X POST \
   "https://iam.bluemix.net/identity/token"
 
 
+# Open up port 80 on a security group in VPC
+ibmcloud is security-group-rule-add <id_of_security group> inbound tcp --port-min 80 --port-max 80 --output JSON
