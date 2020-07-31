@@ -32,3 +32,10 @@ kubectl delete ns <namespace> --grace-period=0 --force
 
 # reload a deploy
 kubectl rollout restart deployment/<deployment name>
+
+
+oc policy who-can exec pods -n yoshi
+
+oc api-resources --api-group=ingress.k8s.io -o wide
+
+oc api-resources --api-group=console.openshift.io -o wide
