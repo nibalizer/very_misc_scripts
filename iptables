@@ -2,3 +2,9 @@
 # redirect connections on external port 22 to port 4633
 
 $ sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 4633
+
+# show all routes, really all
+
+$ ip route show table all 
+
+ref: https://serverfault.com/questions/618857/list-all-route-tables
